@@ -1,0 +1,26 @@
+name: flutter_rtm
+description: Flutter plugin for anyRTC RTM SDK.
+version: 0.9.13
+homepage: https://www.anyrtc.io
+repository: https://github.com/anyRTC/Flutter-RTM
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.12.13+hotfix.6"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: org.ar.rtm_engine
+        pluginClass: ARRtmPlugin
+      ios:
+        pluginClass: ARRtmPlugin

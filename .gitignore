@@ -1,0 +1,13 @@
+.DS_Store
+.dart_tool/
+
+.packages
+.pub/
+
+build/
+*.lock
+*.*~
+example/*.lock
+example/ios/Podfile.lock
+.idea
+*.iml

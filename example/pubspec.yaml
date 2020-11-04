@@ -1,0 +1,22 @@
+name: ar_rtm_example
+description: Demonstrates how to use the flutter_rtm plugin.
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_rtm:
+    path: ../
+
+flutter:
+  uses-material-design: true
