@@ -19,7 +19,7 @@
       return nil;
     }
     _messenger = messenger;
-    NSString *channelName = [NSString stringWithFormat:@"io.ar.rtm.client%@.channel%@", [clientIndex stringValue], channelId];
+    NSString *channelName = [NSString stringWithFormat:@"org.ar.rtm.client%@.channel%@", [clientIndex stringValue], channelId];
     _eventChannel = [FlutterEventChannel eventChannelWithName:channelName binaryMessenger:_messenger];
     if (nil == _eventChannel) {
       return nil;

@@ -1,45 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ar_rtm.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/ar_rtm.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="ChangeListManager">
+    <list default="true" id="d5aa63c8-fa8c-439e-b274-dbbc8aeb34d6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/anyrtc/ar_rtm/ArRtmPlugin.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ar_rtm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ar_rtm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/kotlin/com/anyrtc/ar_rtm_example/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/ArRtmPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/ArRtmPlugin.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/RTMChannel.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/RTMChannel.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/RTMClient.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/RTMClient.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/ar_rtm_channel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ar_rtm_channel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/ar_rtm_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ar_rtm_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/ar_rtm_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ar_rtm_plugin.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ToolWindowManager">
-    <editor active="true" />
-    <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-    </layout>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <option name="show-excluded-files" value="false" />
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1jrfUP9e6U74OnlQ75F50BAJo5z" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5aa63c8-fa8c-439e-b274-dbbc8aeb34d6" name="Default Changelist" comment="" />
+      <created>1604567145573</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604567145573</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="336" y="61" key="CommitChangelistDialog2" timestamp="1604567861326">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="336" y="61" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1604567861326" />
+    <state width="1398" height="376" key="GridCell.Tab.0.bottom" timestamp="1604567744988">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="376" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604567744988" />
+    <state width="1398" height="376" key="GridCell.Tab.0.center" timestamp="1604567744987">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="376" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604567744987" />
+    <state width="1398" height="376" key="GridCell.Tab.0.left" timestamp="1604567744987">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="376" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604567744987" />
+    <state width="1398" height="376" key="GridCell.Tab.0.right" timestamp="1604567744987">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="376" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604567744987" />
+    <state x="221" y="100" key="SettingsEditor" timestamp="1604567203380">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1604567203380" />
   </component>
 </project>

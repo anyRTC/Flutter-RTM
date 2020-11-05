@@ -176,7 +176,7 @@ class ARRtmClient {
 
   ARRtmClient._(this._clientIndex) {
     _closed = false;
-    _clientSubscription = _addEventChannel('io.ar.rtm.client$_clientIndex')
+    _clientSubscription = _addEventChannel('org.ar.rtm.client$_clientIndex')
         .receiveBroadcastStream()
         .listen(_eventListener, onError: onError);
   }

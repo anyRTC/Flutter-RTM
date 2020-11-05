@@ -48,7 +48,7 @@ class ARRtmChannel {
 
   EventChannel _addEventChannel() {
     return new EventChannel(
-        'io.ar.rtm.client$_clientIndex.channel$channelId');
+        'org.ar.rtm.client$_clientIndex.channel$channelId');
   }
 
   _eventListener(dynamic event) {

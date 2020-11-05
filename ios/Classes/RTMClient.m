@@ -17,7 +17,7 @@
     _localInvitations = [[NSMutableDictionary alloc] init];
     _channels = [[NSMutableDictionary alloc] init];
     _messenger = messenger;
-    NSString *channelName = [NSString stringWithFormat:@"io.ar.rtm.client%@", [clientIndex stringValue]];
+    NSString *channelName = [NSString stringWithFormat:@"org.ar.rtm.client%@", [clientIndex stringValue]];
     _eventChannel = [FlutterEventChannel eventChannelWithName:channelName binaryMessenger:messenger];
     if (nil == _eventChannel) {
       return nil;

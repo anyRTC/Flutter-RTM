@@ -20,7 +20,7 @@
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-                                   methodChannelWithName:@"io.ar.rtm"
+                                   methodChannelWithName:@"org.ar.rtm"
                                    binaryMessenger:[registrar messenger]];
     ArRtmPlugin* instance = [[ArRtmPlugin alloc] init];
   instance.methodChannel = channel;
