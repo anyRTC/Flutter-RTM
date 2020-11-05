@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 
-mixin ARRtmPlugin {
-  static const MethodChannel _methodChannel = const MethodChannel("org.ar.rtm");
+mixin ArRtmPlugin {
+  static const MethodChannel _methodChannel = const MethodChannel("io.ar.rtm");
 
   static Future<dynamic> _sendMethodMessage(String call, String method, Map arguments) {
     return _methodChannel.invokeMethod(method, {"call": call, "params": arguments});

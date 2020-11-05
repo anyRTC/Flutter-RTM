@@ -1,23 +1,16 @@
-# ARRtm Example
+# ar_rtm_example
 
-Demonstrates how to use the `ar_rtm` plugin.
+Demonstrates how to use the ar_rtm plugin.
 
 ## Getting Started
 
-### Create an Account and Obtain an App ID
+This project is a starting point for a Flutter application.
 
-1. Create a developer account at [anyrtc.io](https://www.anyrtc.io/).
-2. In the Anyrtc.io Dashboard that appears, click **Projects** > **Project List** in the left navigation.
-3. Copy the **App ID** from the Dashboard to a text file. You will use this ID later when you launch the app.
+A few resources to get you started if this is your first Flutter project:
 
-### Update and Run the Sample Application
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-Open the `main.dart` file. In the `_createClient()` method, update `YOUR APP ID` with your App ID.
-
-```Dart
-_client = await AgoraRtmClient.createInstance('YOUR APP ID');
-```
-
-### Run example
-
-Connect device and run.
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

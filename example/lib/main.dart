@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter_rtm/ar_rtm.dart';
+import 'package:ar_rtm/ar_rtm.dart';
 
 void main() => runApp(MyApp());
 
@@ -57,7 +57,7 @@ class _MyAppState extends State<MyApp> {
 
   void _createClient() async {
     _client =
-        await ARRtmClient.createInstance(YOUR APPID);
+        await ARRtmClient.createInstance("Your APPID");
     _client.onMessageReceived = (ARRtmMessage message, String peerId) {
       _log("Peer msg: " + peerId + ", msg: " + message.text);
     };

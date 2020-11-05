@@ -27,7 +27,7 @@ class ARRtmClient {
   ///
   /// The AR RTM SDK supports multiple [ARRtmClient] instances.
   static Future<ARRtmClient> createInstance(String appId) async {
-    final res = await ARRtmPlugin.callMethodForStatic(
+    final res = await ArRtmPlugin.callMethodForStatic(
         "createInstance", {'appId': appId});
     if (res["errorCode"] != 0)
       throw ARRtmClientException(
@@ -41,7 +41,7 @@ class ARRtmClient {
 
   /// get the AR native sdk version
   static Future<String> getSdkVersion() async {
-    final res = await ARRtmPlugin.callMethodForStatic("getSdkVersion", null);
+    final res = await ArRtmPlugin.callMethodForStatic("getSdkVersion", null);
     if (res["errorCode"] != 0)
       throw ARRtmClientException(
           "getSdkVersion failed errorCode:${res['errorCode']}",
@@ -176,13 +176,13 @@ class ARRtmClient {
 
   ARRtmClient._(this._clientIndex) {
     _closed = false;
-    _clientSubscription = _addEventChannel('org.ar.rtm.client$_clientIndex')
+    _clientSubscription = _addEventChannel('io.ar.rtm.client$_clientIndex')
         .receiveBroadcastStream()
         .listen(_eventListener, onError: onError);
   }
 
   Future<dynamic> _callNative(String methodName, dynamic arguments) {
-    return ARRtmPlugin.callMethodForClient(
+    return ArRtmPlugin.callMethodForClient(
         methodName, {'clientIndex': _clientIndex, 'args': arguments});
   }
 

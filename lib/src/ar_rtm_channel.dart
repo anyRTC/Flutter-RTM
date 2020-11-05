@@ -48,7 +48,7 @@ class ARRtmChannel {
 
   EventChannel _addEventChannel() {
     return new EventChannel(
-        'org.ar.rtm.client$_clientIndex.channel$channelId');
+        'io.ar.rtm.client$_clientIndex.channel$channelId');
   }
 
   _eventListener(dynamic event) {
@@ -89,7 +89,7 @@ class ARRtmChannel {
   }
 
   Future<dynamic> _callNative(String methodName, dynamic arguments) {
-    return ARRtmPlugin.callMethodForChannel(methodName, {
+    return ArRtmPlugin.callMethodForChannel(methodName, {
       'clientIndex': _clientIndex,
       'channelId': channelId,
       'args': arguments
