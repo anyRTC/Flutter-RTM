@@ -57,7 +57,9 @@ class _MyAppState extends State<MyApp> {
 
   void _createClient() async {
     _client =
-        await ARRtmClient.createInstance("Your APPID");
+    await ARRtmClient.createInstance("YOUR APP ID");
+    // var params= '{"Cmd": "ConfPriCloudAddr","ServerAdd": "1.1.1.1","Port":7080}';
+    // _client.setParameters(params);
     _client.onMessageReceived = (ARRtmMessage message, String peerId) {
       _log("Peer msg: " + peerId + ", msg: " + message.text);
     };

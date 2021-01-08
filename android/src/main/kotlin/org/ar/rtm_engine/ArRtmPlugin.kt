@@ -107,8 +107,7 @@ class ArRtmPlugin: MethodCallHandler {
       "getSdkVersion" -> {
         result.success(hashMapOf(
                 "errorCode" to 0,
-                "version" to "1.0.0.4"
-//                "version" to RtmClient.getSdkVersion()
+                "version" to RtmClient.getSdkVersion()
         ))
       }
       else -> {
@@ -207,6 +206,14 @@ class ArRtmPlugin: MethodCallHandler {
                   }
                 }
         )
+      }
+      "setParameters"->{
+        var params = args?.get("parameters")
+        params = when{
+          (params is String) ->params
+          else -> ""
+        }
+        client.setParameters(params)
       }
       "logout" -> {
         client.logout(

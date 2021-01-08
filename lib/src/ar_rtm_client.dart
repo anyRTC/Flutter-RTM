@@ -229,6 +229,10 @@ class ARRtmClient {
           "login failed errorCode:${res['errorCode']}", res['errorCode']);
   }
 
+  Future setParameters(String parameters) async{
+    await _callNative("setParameters", {"parameters":parameters});
+  }
+
   /// Allows a user to log out of the AR RTM system.
   Future logout() async {
     final res = await _callNative("logout", null);
