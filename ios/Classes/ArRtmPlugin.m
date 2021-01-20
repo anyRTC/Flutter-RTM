@@ -97,6 +97,9 @@
       result(@{@"errorCode": @(errorCode)});
     }];
   }
+  else if ([@"setParameters" isEqualToString:name]) {
+      [rtmClient.kit setParameters:args[@"parameters"]];
+  }
   else if ([@"renewToken" isEqualToString:name]) {
     NSString *token = args[@"token"] != [NSNull null] ? args[@"token"] : nil;
     [rtmClient.kit renewToken:token completion:^(NSString *token, ARtmRenewTokenErrorCode errorCode) {
