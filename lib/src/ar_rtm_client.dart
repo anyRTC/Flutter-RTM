@@ -495,7 +495,6 @@ class ARRtmClient {
           "releaseChannel failed errorCode:${res['errorCode']}",
           res['errorCode']);
     _channels[channelId]?.close();
-    _channels.removeWhere((String channelId, ARRtmChannel channel) =>
-        [channelId].contains(channel));
+    _channels.remove(channelId);
   }
 }
