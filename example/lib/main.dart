@@ -284,9 +284,8 @@ class _MyAppState extends State<MyApp> {
       try {
         await _channel.leave();
         _log('Leave channel success.');
-        _client.releaseChannel(_channel.channelId);
+        await _client.releaseChannel(_channel.channelId);
         _channelMessageController.text = null;
-
         setState(() {
           _isInChannel = false;
         });

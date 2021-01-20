@@ -1,36 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5aa63c8-fa8c-439e-b274-dbbc8aeb34d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+    <list default="true" id="d5aa63c8-fa8c-439e-b274-dbbc8aeb34d6" name="Default Changelist" comment="add setParameters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/anyrtc/ar_rtm/ArRtmPlugin.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ar_rtm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ar_rtm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/kotlin/com/anyrtc/ar_rtm_example/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/4.10.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/4.10.2/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/ArRtmPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/ArRtmPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/RTMChannel.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/RTMChannel.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/RTMClient.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/RTMClient.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/ar_rtm_channel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ar_rtm_channel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/ar_rtm_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ar_rtm_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/ar_rtm_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/ar_rtm_plugin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +30,11 @@
   <component name="ProjectId" id="1jrfUP9e6U74OnlQ75F50BAJo5z" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="dart.settings" />
@@ -64,32 +51,91 @@
       <option name="presentableId" value="Default" />
       <updated>1604567145573</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1604567910751</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604567910751</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <created>1604568044570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604568044570</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <created>1604568093283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604568093283</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <MESSAGE value="add setParameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="add setParameters" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="336" y="61" key="CommitChangelistDialog2" timestamp="1604568044434">
+    <state x="214" y="150" key="#xdebugger.evaluate" timestamp="1611131614399">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="336" y="61" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1604568044434" />
-    <state width="1398" height="77" key="GridCell.Tab.0.bottom" timestamp="1604567971274">
+    <state x="214" y="150" key="#xdebugger.evaluate/0.23.1440.877@0.23.1440.877" timestamp="1611131614399" />
+    <state x="613" y="215" key="AndroidProcessChooserDialog" timestamp="1611130364436">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="77" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604567971274" />
-    <state width="1398" height="77" key="GridCell.Tab.0.center" timestamp="1604567971273">
+    <state x="613" y="215" key="AndroidProcessChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1611130364436" />
+    <state x="262" y="30" key="CommitChangelistDialog2" timestamp="1610096431826">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="77" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604567971273" />
-    <state width="1398" height="77" key="GridCell.Tab.0.left" timestamp="1604567971273">
+    <state x="262" y="30" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1610096431826" />
+    <state width="535" height="438" key="DebuggerActiveHint" timestamp="1611131547584">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="77" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604567971273" />
-    <state width="1398" height="77" key="GridCell.Tab.0.right" timestamp="1604567971274">
+    <state width="535" height="438" key="DebuggerActiveHint/0.23.1440.877@0.23.1440.877" timestamp="1611131547584" />
+    <state width="699" height="256" key="GridCell.Tab.0.bottom" timestamp="1611131636479">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="77" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604567971274" />
+    <state width="699" height="256" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1611131636479" />
+    <state width="699" height="256" key="GridCell.Tab.0.center" timestamp="1611131636479">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="699" height="256" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1611131636479" />
+    <state width="699" height="256" key="GridCell.Tab.0.left" timestamp="1611131636478">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="699" height="256" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1611131636478" />
+    <state width="699" height="256" key="GridCell.Tab.0.right" timestamp="1611131636479">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="699" height="256" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1611131636479" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1604567203380">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1604567203380" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1604568117130">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604568117130" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/ar_rtm_client.dart</url>
+          <line>496</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/ar_rtm_client.dart</url>
+          <line>497</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
