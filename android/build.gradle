@@ -39,5 +39,5 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'org.ar:rtm:1.0.1.6'
+    implementation 'org.ar:rtm:1.0.1.7'
 }
