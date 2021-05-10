@@ -19,14 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5aa63c8-fa8c-439e-b274-dbbc8aeb34d6" name="Default Changelist" comment="update">
+    <list default="true" id="d5aa63c8-fa8c-439e-b274-dbbc8aeb34d6" name="Default Changelist" comment="update android sdk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611306920897</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update android sdk">
+      <created>1620631619363</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620631619363</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,22 +129,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="update android sdk" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="699" height="350" key="GridCell.Tab.0.bottom" timestamp="1620631065047">
+    <state x="670" y="54" key="CommitChangelistDialog2" timestamp="1620631665357">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="350" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1620631065047" />
-    <state width="699" height="350" key="GridCell.Tab.0.center" timestamp="1620631065046">
+    <state x="670" y="54" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1620631665357" />
+    <state width="1228" height="253" key="GridCell.Tab.0.bottom" timestamp="1620631793068">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="350" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1620631065046" />
-    <state width="699" height="350" key="GridCell.Tab.0.left" timestamp="1620631065045">
+    <state width="1228" height="253" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1620631793068" />
+    <state width="1228" height="253" key="GridCell.Tab.0.center" timestamp="1620631793067">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="350" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1620631065045" />
-    <state width="699" height="350" key="GridCell.Tab.0.right" timestamp="1620631065046">
+    <state width="1228" height="253" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1620631793067" />
+    <state width="1228" height="253" key="GridCell.Tab.0.left" timestamp="1620631793066">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="699" height="350" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1620631065046" />
+    <state width="1228" height="253" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1620631793066" />
+    <state width="1228" height="253" key="GridCell.Tab.0.right" timestamp="1620631793068">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1228" height="253" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1620631793068" />
+    <state x="441" y="201" key="Vcs.Push.Dialog.v2" timestamp="1620631678582">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="441" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1620631678582" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
