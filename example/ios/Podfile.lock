@@ -1,8 +1,8 @@
 PODS:
   - ar_rtm (1.0.1):
-    - ARtmKit_iOS (= 1.0.1.1)
+    - ARtmKit_iOS (= 1.0.1.6)
     - Flutter
-  - ARtmKit_iOS (1.0.1.1)
+  - ARtmKit_iOS (1.0.1.6)
   - Flutter (1.0.0)
 
 DEPENDENCIES:
