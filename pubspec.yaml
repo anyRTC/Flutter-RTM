@@ -1,6 +1,6 @@
 name: ar_rtm
 description: Flutter plugin for anyRTC RTM SDK.
-version: 0.9.13
+version: 1.0.2.2
 homepage: https://www.anyrtc.io
 repository: https://github.com/anyRTC/Flutter-RTM
 
