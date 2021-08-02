@@ -58,6 +58,9 @@ class ARRtmClient {
   /// Occurs when your token expires.
   void Function() onTokenExpired;
 
+  /// Occurs when the user online status changed.
+  void Function() onPeersOnlineStatusChanged;
+
   /// Occurs when you receive error events.
   void Function() onError;
 
@@ -496,5 +499,27 @@ class ARRtmClient {
           res['errorCode']);
     _channels[channelId]?.close();
     _channels.remove(channelId);
+  }
+
+    /// subscribe the online status of the specified user(s).
+  Future<void> subscribePeersOnlineStatus(
+      List<String> peerIds) async {
+    final res =
+        await _callNative("subscribePeersOnlineStatus", {'peerIds': peerIds});
+    if (res["errorCode"] != 0)
+      throw ARRtmClientException(
+          "subscribePeersOnlineStatus failed errorCode:${res['errorCode']}",
+          res['errorCode']);
+  }
+
+    /// unsubscribe the online status of the specified user(s).
+  Future<void> unsubscribePeersOnlineStatus(
+      List<String> peerIds) async {
+    final res =
+        await _callNative("unsubscribePeersOnlineStatus", {'peerIds': peerIds});
+    if (res["errorCode"] != 0)
+      throw ARRtmClientException(
+          "unsubscribePeersOnlineStatus failed errorCode:${res['errorCode']}",
+          res['errorCode']);
   }
 }
