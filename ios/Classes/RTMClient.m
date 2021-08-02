@@ -83,6 +83,17 @@
     [self sendClientEvent:@"onTokenExpired" params:@{}];
 }
 
+- (void)rtmKit:(ARtmKit *)kit peersOnlineStatusChanged:(NSArray<ARtmPeerOnlineStatus *> *)onlineStatus {
+    NSMutableArray<NSDictionary*> *onlineArr = [NSMutableArray new];
+    for (ARtmPeerOnlineStatus * status in onlineStatus) {
+        [onlineArr addObject:@{
+                            @"peerId": status.peerId,
+                            @"state": [NSNumber numberWithInteger:status.state]
+                            }];
+    }
+    [self sendClientEvent:@"onPeersOnlineStatusChanged" params:@{}];
+}
+
 //MARK: - ARtmCallDelegate
 
 - (void)rtmCallKit:(ARtmCallKit *)callKit localInvitationReceivedByPeer:(ARtmLocalInvitation *)localInvitation {

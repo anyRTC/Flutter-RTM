@@ -358,6 +358,18 @@
     [rtmClient.channels removeObjectForKey:channelId];
     result(@{@"errorCode": @(0)});
   }
+  else if ([@"subscribePeersOnlineStatus" isEqualToString:name]) {
+    NSArray *peerIds = args[@"peerIds"] != [NSNull null] ? args[@"peerIds"] : nil;
+      [rtmClient.kit subscribePeersOnlineStatus:peerIds completion:^(ARtmPeerSubscriptionStatusErrorCode errorCode) {
+          result(@{@"errorCode": @(errorCode)});
+      }];
+  }
+  else if ([@"unsubscribePeersOnlineStatus" isEqualToString:name]) {
+      NSArray *peerIds = args[@"peerIds"] != [NSNull null] ? args[@"peerIds"] : nil;
+      [rtmClient.kit unsubscribePeersOnlineStatus:peerIds completion:^(ARtmPeerSubscriptionStatusErrorCode errorCode) {
+          result(@{@"errorCode": @(errorCode)});
+      }];
+  }
   else {
     result(@{@"errorCode": @(-2), @"reason": FlutterMethodNotImplemented});
   }
