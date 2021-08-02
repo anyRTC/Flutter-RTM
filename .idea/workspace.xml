@@ -19,9 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5aa63c8-fa8c-439e-b274-dbbc8aeb34d6" name="Default Changelist" comment="update android sdk">
+    <list default="true" id="d5aa63c8-fa8c-439e-b274-dbbc8aeb34d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtm_engine/ArRtmPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtm_engine/ArRtmPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtm_engine/RTMClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/org/ar/rtm_engine/RTMClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620631619363</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update android sdk">
+      <created>1627524209295</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627524209295</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,30 +138,40 @@
     <option name="LAST_COMMIT_MESSAGE" value="update android sdk" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="670" y="54" key="CommitChangelistDialog2" timestamp="1620631665357">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="1937" y="34" key="CommitChangelistDialog2" timestamp="1627524209063">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state x="1937" y="34" key="CommitChangelistDialog2/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1627524209063" />
     <state x="670" y="54" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1620631665357" />
-    <state width="1228" height="253" key="GridCell.Tab.0.bottom" timestamp="1620631793068">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="699" height="350" key="GridCell.Tab.0.bottom" timestamp="1627524514063">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state width="699" height="350" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1627524514063" />
     <state width="1228" height="253" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1620631793068" />
-    <state width="1228" height="253" key="GridCell.Tab.0.center" timestamp="1620631793067">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="699" height="350" key="GridCell.Tab.0.center" timestamp="1627524514062">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state width="699" height="350" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1627524514062" />
     <state width="1228" height="253" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1620631793067" />
-    <state width="1228" height="253" key="GridCell.Tab.0.left" timestamp="1620631793066">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="699" height="350" key="GridCell.Tab.0.left" timestamp="1627524514061">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state width="699" height="350" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1627524514061" />
     <state width="1228" height="253" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1620631793066" />
-    <state width="1228" height="253" key="GridCell.Tab.0.right" timestamp="1620631793068">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state width="699" height="350" key="GridCell.Tab.0.right" timestamp="1627524514062">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state width="699" height="350" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1627524514062" />
     <state width="1228" height="253" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1620631793068" />
-    <state x="441" y="201" key="Vcs.Push.Dialog.v2" timestamp="1620631678582">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="2028" y="238" key="Vcs.Push.Dialog.v2" timestamp="1627524226911">
+      <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state x="2028" y="238" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1627524226911" />
     <state x="441" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1620631678582" />
+    <state x="2024" y="338" key="git4idea.merge.GitPullDialog" timestamp="1627524217205">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2024" y="338" key="git4idea.merge.GitPullDialog/0.23.1440.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1627524217205" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -223,6 +223,6 @@ class RTMClient : RtmClientListener, EventChannel.StreamHandler, RtmCallEventLis
 
     override
     fun onPeersOnlineStatusChanged(p0: MutableMap<String, Int>) {
-
+        sendClientEvent("onPeersOnlineStatusChanged", hashMapOf("onlineStatus" to p0))
     }
 }

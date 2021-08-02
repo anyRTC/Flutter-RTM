@@ -829,6 +829,40 @@ class ArRtmPlugin: MethodCallHandler {
           result.success(hashMapOf("errorCode" to 0))
         }
       }
+      "subscribePeersOnlineStatus"->{
+        val peers: Set<String>? = args?.get("peerIds") as Set<String>
+        client.subscribePeersOnlineStatus(peers,object : ResultCallback<Void> {
+          override fun onSuccess(resp: Void?) {
+            runMainThread {
+              result.success(hashMapOf(
+                      "errorCode" to 0
+              ))
+            }
+          }
+          override fun onFailure(code: ErrorInfo) {
+            runMainThread {
+              result.success(hashMapOf("errorCode" to code.errorCode))
+            }
+          }
+        })
+      }
+      "unsubscribePeersOnlineStatus"->{
+        val peers: Set<String>? = args?.get("peerIds") as Set<String>
+        client.subscribePeersOnlineStatus(peers,object : ResultCallback<Void> {
+          override fun onSuccess(resp: Void?) {
+            runMainThread {
+              result.success(hashMapOf(
+                      "errorCode" to 0
+              ))
+            }
+          }
+          override fun onFailure(code: ErrorInfo) {
+            runMainThread {
+              result.success(hashMapOf("errorCode" to code.errorCode))
+            }
+          }
+        })
+      }
       else -> {
         result.notImplemented();
       }
@@ -952,6 +986,7 @@ class ArRtmPlugin: MethodCallHandler {
           }
         })
       }
+
       else -> {
         result.notImplemented();
       }
