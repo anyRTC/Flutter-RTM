@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'dart:collection';
+import 'dart:convert';
 
 import 'package:flutter/services.dart';
 
@@ -59,7 +61,7 @@ class ARRtmClient {
   void Function() onTokenExpired;
 
   /// Occurs when the user online status changed.
-  void Function() onPeersOnlineStatusChanged;
+  void Function(List<ARtmPeerOnlineStatus> list) onPeersOnlineStatusChanged;
 
   /// Occurs when you receive error events.
   void Function() onError;
@@ -123,6 +125,11 @@ class ARRtmClient {
         break;
       case 'onTokenExpired':
         this?.onTokenExpired?.call();
+        break;
+      case 'onPeersOnlineStatusChanged':
+        var listStates = jsonDecode(map['onlineStatus']);
+        List<ARtmPeerOnlineStatus> list = (listStates as List<dynamic>).map((e) => ARtmPeerOnlineStatus.fromJson((e as Map<String,dynamic>))).toList();
+        this?.onPeersOnlineStatusChanged?.call(list);
         break;
       case 'onLocalInvitationReceivedByPeer':
         this

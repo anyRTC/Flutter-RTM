@@ -5,6 +5,8 @@ import android.os.Handler
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.EventChannel
 import org.ar.rtm.*
+import org.json.JSONArray
+import org.json.JSONObject
 
 class RTMClient : RtmClientListener, EventChannel.StreamHandler, RtmCallEventListener {
 
@@ -223,6 +225,13 @@ class RTMClient : RtmClientListener, EventChannel.StreamHandler, RtmCallEventLis
 
     override
     fun onPeersOnlineStatusChanged(p0: MutableMap<String, Int>) {
-        sendClientEvent("onPeersOnlineStatusChanged", hashMapOf("onlineStatus" to p0))
+        val array = JSONArray()
+       p0.forEach {
+           array.put(JSONObject().apply {
+               put("peerId",it.key)
+               put("state",it.value)
+           })
+       }
+        sendClientEvent("onPeersOnlineStatusChanged", hashMapOf("onlineStatus" to array.toString()))
     }
 }

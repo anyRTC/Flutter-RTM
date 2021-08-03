@@ -129,3 +129,12 @@ class ARRtmRemoteInvitation {
     return "{callerId: $callerId, content: $content, response: $response, channelId: $channelId, state: $state}";
   }
 }
+
+class ARtmPeerOnlineStatus{
+  String peerId;
+  int state;//0在线 1连接状态不稳定（服务器连续 6 秒未收到来自 SDK 的数据包 2用户不在线
+
+  ARtmPeerOnlineStatus.fromJson(Map<dynamic, dynamic> json)
+      : peerId = json['peerId'],
+        state = json['state'];
+}

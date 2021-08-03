@@ -830,8 +830,12 @@ class ArRtmPlugin: MethodCallHandler {
         }
       }
       "subscribePeersOnlineStatus"->{
-        val peers: Set<String>? = args?.get("peerIds") as Set<String>
-        client.subscribePeersOnlineStatus(peers,object : ResultCallback<Void> {
+        val peers: List<String>? = args?.get("peerIds") as List<String>
+        val setPeers = mutableSetOf<String>()
+        peers?.forEach {
+          setPeers.add(it)
+        }
+        client.subscribePeersOnlineStatus(setPeers,object : ResultCallback<Void> {
           override fun onSuccess(resp: Void?) {
             runMainThread {
               result.success(hashMapOf(
@@ -847,8 +851,12 @@ class ArRtmPlugin: MethodCallHandler {
         })
       }
       "unsubscribePeersOnlineStatus"->{
-        val peers: Set<String>? = args?.get("peerIds") as Set<String>
-        client.subscribePeersOnlineStatus(peers,object : ResultCallback<Void> {
+        val peers: List<String>? = args?.get("peerIds") as List<String>
+        val setPeers = mutableSetOf<String>()
+        peers?.forEach {
+          setPeers.add(it)
+        }
+        client.unsubscribePeersOnlineStatus(setPeers,object : ResultCallback<Void> {
           override fun onSuccess(resp: Void?) {
             runMainThread {
               result.success(hashMapOf(

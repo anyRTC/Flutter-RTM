@@ -13,9 +13,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   bool _isLogin = false;
   bool _isInChannel = false;
+  bool _isSubsribe = false;
 
   final _userNameController = TextEditingController();
   final _peerUserIdController = TextEditingController();
+  final _subUserIdController = TextEditingController();
   final _peerMessageController = TextEditingController();
   final _channelNameController = TextEditingController();
   final _channelMessageController = TextEditingController();
@@ -44,6 +46,7 @@ class _MyAppState extends State<MyApp> {
               children: [
                 _buildLogin(),
                 _buildQueryOnlineStatus(),
+                _buildSubscribePeersOnlineStatus(),
                 _buildSendPeerMessage(),
                 _buildJoinChannel(),
                 _buildGetMembers(),
@@ -73,6 +76,9 @@ class _MyAppState extends State<MyApp> {
           _isLogin = false;
         });
       }
+    };
+    _client.onPeersOnlineStatusChanged =(List<ARtmPeerOnlineStatus> list){
+      _log("onPeersOnlineStatusChanged peerId: " + list[0].peerId + ', state: ' + list[0].state.toString());
     };
   }
 
@@ -123,6 +129,27 @@ class _MyAppState extends State<MyApp> {
       new OutlineButton(
         child: Text('Query Online', style: textStyle),
         onPressed: _toggleQuery,
+      )
+    ]);
+  }
+
+  Widget _buildSubscribePeersOnlineStatus() {
+    if (!_isLogin) {
+      return Container();
+    }
+    return Row(children: <Widget>[
+      _isSubsribe
+          ? new Expanded(
+          child: new Text('已订阅: ' + _subUserIdController.text,
+              style: textStyle))
+          : new Expanded(
+          child: new TextField(
+              controller: _subUserIdController,
+              decoration: InputDecoration(hintText: 'Input subscribe peerId'))),
+      new OutlineButton(
+        child: Text(_isSubsribe ? 'UnSubscribe' : 'Subscribe',
+            style: textStyle),
+        onPressed: _toggleSubscribe,
       )
     ]);
   }
@@ -196,7 +223,7 @@ class _MyAppState extends State<MyApp> {
     return Expanded(
         child: Container(
             child: ListView.builder(
-      itemExtent: 24,
+      itemExtent: 28,
       itemBuilder: (context, i) {
         return ListTile(
           contentPadding: const EdgeInsets.all(0.0),
@@ -276,6 +303,24 @@ class _MyAppState extends State<MyApp> {
       _log('Send peer message error: ' + errorCode.toString());
     }
   }
+
+  void _toggleSubscribe() async {
+      if(_isSubsribe){
+        List<String> list = [_subUserIdController.text];
+        await _client.unsubscribePeersOnlineStatus(list);
+        _subUserIdController.text = null;
+        setState(() {
+          _isSubsribe = false;
+        });
+      }else{
+        List<String> list = [_subUserIdController.text];
+        await _client.subscribePeersOnlineStatus(list);
+        setState(() {
+          _isSubsribe = true;
+        });
+      }
+  }
+
 
   void _toggleJoinChannel() async {
     if (_isInChannel) {
