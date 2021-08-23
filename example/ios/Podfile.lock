@@ -1,8 +1,8 @@
 PODS:
-  - ar_rtm (1.0.1):
-    - ARtmKit_iOS (= 1.0.1.6)
+  - ar_rtm (1.0.0):
+    - ARtmKit_iOS (= 1.0.1.7)
     - Flutter
-  - ARtmKit_iOS (1.0.1.6)
+  - ARtmKit_iOS (1.0.1.7)
   - Flutter (1.0.0)
 
 DEPENDENCIES:
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  ar_rtm: 819e453d69ded1bff9dd5728d1da87453950766a
-  ARtmKit_iOS: 44903052586e71ac0083386bd4ebdfd0340008b8
+  ar_rtm: 9fe530aeed34be90df3e94519ca262af7ed3afab
+  ARtmKit_iOS: 2dc729a2160abbf2d0b0b8664ff29b866bf05d4d
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
 
 PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
