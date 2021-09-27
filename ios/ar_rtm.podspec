@@ -21,7 +21,7 @@ A new flutter plugin project.
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'ARtmKit_iOS', '1.0.1.6'
+  s.dependency 'ARtmKit_iOS', '1.0.1.7'
   s.platform = :ios, '9.0'
 
 end
