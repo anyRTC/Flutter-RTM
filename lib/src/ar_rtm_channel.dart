@@ -21,30 +21,30 @@ class ARRtmChannelException implements Exception {
 
 class ARRtmChannel {
   /// Occurs when you receive error events.
-  void Function(dynamic error) onError;
+  void Function(dynamic error)? onError;
 
   /// Occurs when receiving a channel message.
-  void Function(ARRtmMessage message, ARRtmMember fromMember)
+  void Function(ARRtmMessage message, ARRtmMember fromMember)?
       onMessageReceived;
 
   /// Occurs when a user joins the channel.
-  void Function(ARRtmMember member) onMemberJoined;
+  void Function(ARRtmMember member)? onMemberJoined;
 
   /// Occurs when a channel member leaves the channel.
-  void Function(ARRtmMember member) onMemberLeft;
+  void Function(ARRtmMember member)? onMemberLeft;
 
   /// Occurs when channel attribute updated.
-  void Function(List<ARRtmChannelAttribute> attributes) onAttributesUpdated;
+  void Function(List<ARRtmChannelAttribute> attributes)? onAttributesUpdated;
 
   /// Occurs when channel member count updated.
-  void Function(int count) onMemberCountUpdated;
+  void Function(int count)? onMemberCountUpdated;
 
-  final String channelId;
-  final int _clientIndex;
+  final String? channelId;
+  final int? _clientIndex;
 
-  bool _closed;
+  bool? _closed;
 
-  StreamSubscription<dynamic> _eventSubscription;
+  StreamSubscription<dynamic>? _eventSubscription;
 
   EventChannel _addEventChannel() {
     return new EventChannel(
@@ -57,26 +57,26 @@ class ARRtmChannel {
       case 'onMessageReceived':
         ARRtmMessage message = ARRtmMessage.fromJson(map['message']);
         ARRtmMember member = ARRtmMember.fromJson(map);
-        this?.onMessageReceived?.call(message, member);
+        this.onMessageReceived?.call(message, member);
         break;
       case 'onMemberJoined':
         ARRtmMember member = ARRtmMember.fromJson(map);
-        this?.onMemberJoined?.call(member);
+        this.onMemberJoined?.call(member);
         break;
       case 'onMemberLeft':
         ARRtmMember member = ARRtmMember.fromJson(map);
-        this?.onMemberLeft?.call(member);
+        this.onMemberLeft?.call(member);
         break;
       case 'onAttributesUpdated':
         List<Map<dynamic, dynamic>> attributes =
             List<Map<dynamic, dynamic>>.from(map['attributes']);
-        this?.onAttributesUpdated?.call(attributes
+        this.onAttributesUpdated?.call(attributes
             .map((attr) => ARRtmChannelAttribute.fromJson(attr))
             .toList());
         break;
       case 'onMemberCountUpdated':
         int count = map['count'];
-        this?.onMemberCountUpdated?.call(count);
+        this.onMemberCountUpdated?.call(count);
         break;
     }
   }
@@ -104,7 +104,7 @@ class ARRtmChannel {
   }
 
   Future<void> sendMessage(ARRtmMessage message,
-      [bool offline, bool historical]) async {
+      [bool? offline, bool? historical]) async {
     final res = await _callNative("sendMessage", {
       'message': message.text,
       "offline": offline,
@@ -135,8 +135,8 @@ class ARRtmChannel {
   }
 
   Future<void> close() async {
-    if (_closed) return null;
-    await _eventSubscription.cancel();
+    if (_closed ?? true) return null;
+    await _eventSubscription?.cancel();
     _closed = true;
   }
 

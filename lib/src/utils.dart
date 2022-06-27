@@ -5,7 +5,8 @@ class ARRtmMessage {
 
   ARRtmMessage(this.text, this.ts, this.offline);
 
-  ARRtmMessage.fromText(String text) : text = text;
+  ARRtmMessage.fromText(String text, {this.ts = 0, this.offline = false})
+      : text = text;
 
   ARRtmMessage.fromJson(Map<dynamic, dynamic> json)
       : text = json['text'],
@@ -47,7 +48,7 @@ class ARRtmChannelAttribute {
   String userId;
   int updateTs;
 
-  ARRtmChannelAttribute(this.key, this.value, {this.userId, this.updateTs});
+  ARRtmChannelAttribute(this.key, this.value, {this.userId="", this.updateTs=0});
 
   ARRtmChannelAttribute.fromJson(Map<dynamic, dynamic> json)
       : key = json['key'],

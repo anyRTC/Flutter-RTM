@@ -38,7 +38,7 @@ class ARRtmClient {
     final index = res['index'];
     ARRtmClient client = ARRtmClient._(index);
     _clients[index] = client;
-    return _clients[index];
+    return client;
   }
 
   /// get the AR native sdk version
@@ -52,59 +52,59 @@ class ARRtmClient {
   }
 
   /// Occurs when the connection state between the SDK and the AR RTM system changes.
-  void Function(int state, int reason) onConnectionStateChanged;
+  void Function(int state, int reason)? onConnectionStateChanged;
 
   /// Occurs when the local user receives a peer-to-peer message.
-  void Function(ARRtmMessage message, String peerId) onMessageReceived;
+  void Function(ARRtmMessage message, String peerId)? onMessageReceived;
 
   /// Occurs when your token expires.
-  void Function() onTokenExpired;
+  void Function()? onTokenExpired;
 
   /// Occurs when the user online status changed.
-  void Function(List<ARtmPeerOnlineStatus> list) onPeersOnlineStatusChanged;
+  void Function(List<ARtmPeerOnlineStatus> list)? onPeersOnlineStatusChanged;
 
   /// Occurs when you receive error events.
-  void Function() onError;
+  void Function()? onError;
 
   /// Callback to the caller: occurs when the caller receives the call invitation.
-  void Function(ARRtmLocalInvitation invite) onLocalInvitationReceivedByPeer;
+  void Function(ARRtmLocalInvitation invite)? onLocalInvitationReceivedByPeer;
 
   /// Callback to the caller: occurs when the caller accepts the call invitation.
-  void Function(ARRtmLocalInvitation invite) onLocalInvitationAccepted;
+  void Function(ARRtmLocalInvitation invite)? onLocalInvitationAccepted;
 
   /// Callback to the caller: occurs when the caller declines the call invitation.
-  void Function(ARRtmLocalInvitation invite) onLocalInvitationRefused;
+  void Function(ARRtmLocalInvitation invite)? onLocalInvitationRefused;
 
   /// Callback to the caller: occurs when the caller cancels a call invitation.
-  void Function(ARRtmLocalInvitation invite) onLocalInvitationCanceled;
+  void Function(ARRtmLocalInvitation invite)? onLocalInvitationCanceled;
 
   /// Callback to the caller: occurs when the life cycle of the outgoing call invitation ends in failure.
-  void Function(ARRtmLocalInvitation invite, int errorCode)
+  void Function(ARRtmLocalInvitation invite, int errorCode)?
       onLocalInvitationFailure;
 
   /// Callback to the caller: occurs when the callee receives the call invitation.
-  void Function(ARRtmRemoteInvitation invite)
+  void Function(ARRtmRemoteInvitation invite)?
       onRemoteInvitationReceivedByPeer;
 
   /// Callback to the caller: occurs when the callee accepts the call invitation.
-  void Function(ARRtmRemoteInvitation invite) onRemoteInvitationAccepted;
+  void Function(ARRtmRemoteInvitation invite)? onRemoteInvitationAccepted;
 
   /// Callback to the caller: occurs when the callee declines the call invitation.
-  void Function(ARRtmRemoteInvitation invite) onRemoteInvitationRefused;
+  void Function(ARRtmRemoteInvitation invite)? onRemoteInvitationRefused;
 
   /// Callback to the caller: occurs when the caller cancels a call invitation.
-  void Function(ARRtmRemoteInvitation invite) onRemoteInvitationCanceled;
+  void Function(ARRtmRemoteInvitation invite)? onRemoteInvitationCanceled;
 
   /// Callback to the caller: occurs when the life cycle of the outgoing call invitation ends in failure.
-  void Function(ARRtmRemoteInvitation invite, int errorCode)
+  void Function(ARRtmRemoteInvitation invite, int errorCode)?
       onRemoteInvitationFailure;
 
   var _channels = <String, ARRtmChannel>{};
 
-  bool _closed;
+  bool? _closed;
 
-  final int _clientIndex;
-  StreamSubscription<dynamic> _clientSubscription;
+  final int? _clientIndex;
+  StreamSubscription<dynamic>? _clientSubscription;
 
   EventChannel _addEventChannel(name) {
     return new EventChannel(name);
@@ -116,68 +116,68 @@ class ARRtmClient {
       case 'onConnectionStateChanged':
         int state = map['state'];
         int reason = map['reason'];
-        this?.onConnectionStateChanged?.call(state, reason);
+        this.onConnectionStateChanged?.call(state, reason);
         break;
       case 'onMessageReceived':
         ARRtmMessage message = ARRtmMessage.fromJson(map["message"]);
         String peerId = map["peerId"];
-        this?.onMessageReceived?.call(message, peerId);
+        this.onMessageReceived?.call(message, peerId);
         break;
       case 'onTokenExpired':
-        this?.onTokenExpired?.call();
+        this.onTokenExpired?.call();
         break;
       case 'onPeersOnlineStatusChanged':
         var listStates = jsonDecode(map['onlineStatus']);
         List<ARtmPeerOnlineStatus> list = (listStates as List<dynamic>).map((e) => ARtmPeerOnlineStatus.fromJson((e as Map<String,dynamic>))).toList();
-        this?.onPeersOnlineStatusChanged?.call(list);
+        this.onPeersOnlineStatusChanged?.call(list);
         break;
       case 'onLocalInvitationReceivedByPeer':
         this
-            ?.onLocalInvitationReceivedByPeer
+            .onLocalInvitationReceivedByPeer
             ?.call(ARRtmLocalInvitation.fromJson(map['localInvitation']));
         break;
       case 'onLocalInvitationAccepted':
         this
-            ?.onLocalInvitationAccepted
+            .onLocalInvitationAccepted
             ?.call(ARRtmLocalInvitation.fromJson(map['localInvitation']));
         break;
       case 'onLocalInvitationRefused':
         this
-            ?.onLocalInvitationRefused
+            .onLocalInvitationRefused
             ?.call(ARRtmLocalInvitation.fromJson(map['localInvitation']));
         break;
       case 'onLocalInvitationCanceled':
         this
-            ?.onLocalInvitationCanceled
+            .onLocalInvitationCanceled
             ?.call(ARRtmLocalInvitation.fromJson(map['localInvitation']));
         break;
       case 'onLocalInvitationFailure':
-        this?.onLocalInvitationFailure?.call(
+        this.onLocalInvitationFailure?.call(
             ARRtmLocalInvitation.fromJson(map['localInvitation']),
             map['errorCode']);
         break;
       case 'onRemoteInvitationReceivedByPeer':
         this
-            ?.onRemoteInvitationReceivedByPeer
+            .onRemoteInvitationReceivedByPeer
             ?.call(ARRtmRemoteInvitation.fromJson(map['remoteInvitation']));
         break;
       case 'onRemoteInvitationAccepted':
         this
-            ?.onRemoteInvitationAccepted
+            .onRemoteInvitationAccepted
             ?.call(ARRtmRemoteInvitation.fromJson(map['remoteInvitation']));
         break;
       case 'onRemoteInvitationRefused':
         this
-            ?.onRemoteInvitationRefused
+            .onRemoteInvitationRefused
             ?.call(ARRtmRemoteInvitation.fromJson(map['remoteInvitation']));
         break;
       case 'onRemoteInvitationCanceled':
         this
-            ?.onRemoteInvitationCanceled
+            .onRemoteInvitationCanceled
             ?.call(ARRtmRemoteInvitation.fromJson(map['remoteInvitation']));
         break;
       case 'onRemoteInvitationFailure':
-        this?.onRemoteInvitationFailure?.call(
+        this.onRemoteInvitationFailure?.call(
             ARRtmRemoteInvitation.fromJson(map['remoteInvitation']),
             map['errorCode']);
         break;
@@ -198,8 +198,8 @@ class ARRtmClient {
 
   /// Destroy and stop event to the client with related channels.
   Future<void> destroy() async {
-    if (_closed) return null;
-    await _clientSubscription.cancel();
+    if (_closed ?? true) return null;
+    await _clientSubscription?.cancel();
     _closed = true;
     for (String channelId in _channels.keys) {
       await releaseChannel(channelId);
@@ -266,7 +266,7 @@ class ARRtmClient {
 
   /// Allows a user to send a peer-to-peer message to a specific peer user.
   Future<void> sendMessageToPeer(String peerId, ARRtmMessage message,
-      [bool offline, bool historical]) async {
+      [bool? offline, bool? historical]) async {
     final res = await _callNative("sendMessageToPeer", {
       "peerId": peerId,
       "message": message.text,
@@ -494,7 +494,7 @@ class ARRtmClient {
           res['errorCode']);
     ARRtmChannel channel = ARRtmChannel(_clientIndex, channelId);
     _channels[channelId] = channel;
-    return _channels[channelId];
+    return channel;
   }
 
   /// Releases an [ARRtmChannel].

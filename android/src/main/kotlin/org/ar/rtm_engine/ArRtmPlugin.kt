@@ -3,6 +3,8 @@ package org.ar.rtm_engine
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
+import io.flutter.embedding.engine.plugins.FlutterPlugin
+import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
@@ -12,37 +14,39 @@ import org.ar.rtm.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
-class ArRtmPlugin: MethodCallHandler {
-  private val registrar: Registrar
-  private val methodChannel: MethodChannel
-  private val eventHandler: Handler
+class ArRtmPlugin: FlutterPlugin,MethodCallHandler {
+  private var registrar: Registrar?=null
+  private var binding: FlutterPlugin.FlutterPluginBinding? = null
+  private lateinit var applicationContext: Context
+  private lateinit var methodChannel: MethodChannel
+  private val handler: Handler = Handler(Looper.getMainLooper())
   private var nextClientIndex: Long = 0
   private var clients = HashMap<Long, RTMClient>()
 
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "org.ar.rtm")
-      val plugin = ArRtmPlugin(registrar, channel)
-      channel.setMethodCallHandler(plugin)
+      ArRtmPlugin().apply {
+        this.registrar = registrar
+        initPlugin(registrar.context(),registrar.messenger())
+      }
     }
   }
 
-  constructor(registrar: Registrar, channel: MethodChannel) {
-    this.registrar = registrar
-    this.methodChannel = channel
-    this.eventHandler = Handler(Looper.getMainLooper())
+  private fun initPlugin(
+    context: Context,
+    binaryMessenger: BinaryMessenger
+  ) {
+    applicationContext = context.applicationContext
+    methodChannel = MethodChannel(binaryMessenger, "org.ar.rtm")
+    methodChannel.setMethodCallHandler(this)
   }
 
-  private fun getActiveContext(): Context {
-    return when {
-      (registrar.activity() == null) -> registrar.context()
-      else -> registrar.activity()
-    }
-  }
+
+
 
   private fun runMainThread(f: () -> Unit) {
-    eventHandler.post(f)
+    handler.post(f)
   }
 
   override fun onMethodCall(methodCall: MethodCall, result: Result) {
@@ -96,7 +100,7 @@ class ArRtmPlugin: MethodCallHandler {
           nextClientIndex++
         }
 
-        val rtmClient = RTMClient(getActiveContext(), appId, nextClientIndex, registrar.messenger(), eventHandler)
+        val rtmClient = RTMClient(applicationContext, appId, nextClientIndex, registrar?.messenger() ?: binding!!.binaryMessenger,handler)
         result.success(hashMapOf(
                 "errorCode" to 0,
                 "index" to nextClientIndex
@@ -149,7 +153,7 @@ class ArRtmPlugin: MethodCallHandler {
         }
       }
       "setLog" -> {
-        val relativePath = "/sdcard/${getActiveContext().packageName}"
+        val relativePath = "/sdcard/${applicationContext.packageName}"
         val size: Int = when {
           args?.get("size") is Int -> args.get("size") as Int
           else -> 524288
@@ -801,7 +805,7 @@ class ArRtmPlugin: MethodCallHandler {
       }
       "createChannel" -> {
         val channelId = args?.get("channelId") as String
-        val rtmChannel = RTMChannel(clientIndex, channelId, registrar.messenger(), eventHandler)
+        val rtmChannel = RTMChannel(clientIndex, channelId, registrar?.messenger() ?: binding!!.binaryMessenger, handler)
         val channel: RtmChannel? = client.createChannel(channelId, rtmChannel)
         if (null == channel) {
           runMainThread {
@@ -999,5 +1003,14 @@ class ArRtmPlugin: MethodCallHandler {
         result.notImplemented();
       }
     }
+  }
+
+  override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+    this.binding = binding
+    initPlugin(binding.applicationContext, binding.binaryMessenger)
+  }
+
+  override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+    methodChannel.setMethodCallHandler(null)
   }
 }
